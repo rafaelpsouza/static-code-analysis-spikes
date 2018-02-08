@@ -7,6 +7,7 @@ Static code analysis spikes and examples
 * http://checkstyle.sourceforge.net/
 * http://google.github.io/styleguide/javaguide.html
 * https://github.com/checkstyle/checkstyle/blob/checkstyle-8.8/src/main/resources/google_checks.xml
+* http://editorconfig.org/
 
 ## Error Prone
 
