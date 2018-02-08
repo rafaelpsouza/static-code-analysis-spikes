@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+
+dependencies {
+    testCompile("junit:junit:4.12")
+}
+
+// http://google.github.io/styleguide/javaguide.html
+checkstyle {
+    //https://github.com/checkstyle/checkstyle/blob/checkstyle-8.8/src/main/resources/google_checks.xml
+    configFile = new File(rootDir, "google_checks.xml")
+    toolVersion = "8.8"
+}
+
+repositories {
+    mavenCentral()
+}

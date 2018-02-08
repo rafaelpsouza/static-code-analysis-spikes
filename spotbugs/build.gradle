@@ -1,0 +1,27 @@
+plugins {    
+    id "java"
+    id "com.github.spotbugs" version "1.6.0"
+}
+
+apply plugin: 'java'
+
+//http://gradle.monochromeroad.com/docs/dsl/org.gradle.api.plugins.quality.FindBugsExtension.html
+spotbugs{
+
+}
+
+// To generate an HTML report instead of XML
+tasks.withType(com.github.spotbugs.SpotBugsTask) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
+
+dependencies {
+    testCompile("junit:junit:4.12")
+}
+
+repositories {
+    mavenCentral()
+}
