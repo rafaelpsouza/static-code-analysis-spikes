@@ -1,0 +1,19 @@
+ext {
+    localjavac = "/home/rafael/.gradle/caches/modules-2/files-2.1/com.google.errorprone/javac/9+181-r4173-1/bdf4c0aa7d540ee1f7bf14d47447aea4bbf450c5/javac-9+181-r4173-1.jar"
+}
+
+
+dependencies {
+    compileOnly("com.google.auto.service:auto-service:1.0-rc2")
+    testCompile("com.google.errorprone:error_prone_test_helpers:2.2.0")
+}
+
+test {
+    jvmArgs "-Xbootclasspath/p:$localjavac"
+}
+
+task printProps {
+    doLast {
+        println "Rafael: $localjavac"
+    }
+}

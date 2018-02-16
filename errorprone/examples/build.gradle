@@ -1,0 +1,18 @@
+plugins {
+    id "net.ltgt.errorprone" version "0.0.13"
+}
+
+apply plugin: "net.ltgt.errorprone"
+
+configurations {
+    annotationProcessor
+}
+
+dependencies {
+    annotationProcessor project(':custom-checks')
+}
+
+tasks.withType(JavaCompile) {
+    //'-Xep:DeadException:WARN'
+    options.compilerArgs += [ '-processorpath', configurations.annotationProcessor.asPath ]
+}

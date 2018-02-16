@@ -1,0 +1,12 @@
+allprojects {
+	apply plugin: "java"
+
+	dependencies {
+	    compileOnly("com.google.errorprone:error_prone_core:2.2.0")
+	    testCompile("junit:junit:4.12")
+	}
+
+	repositories {
+    	mavenCentral()
+	}
+}
